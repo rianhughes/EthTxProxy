@@ -56,4 +56,12 @@ python3 web3unittest.py
 ````
 
 
-    
+## Docker 
+
+A dockerfile has been included to build a stable image. Here are some useful docker commands to get it up and running, and to interact with the image, etc:
+```
+docker build  --tag txproxy .
+docker run  -p 8000:8000 -it txproxy /bin/bash
+docker ps # To get the Container_ID
+docker exec -it <Container_ID> bash
+```
