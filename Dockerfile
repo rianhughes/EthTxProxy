@@ -38,13 +38,3 @@ RUN git clone https://github.com/rianhughes/EthTxProxy_ReverseProxy
 RUN cd EthTxProxy_ReverseProxy && \
     go mod tidy && \ 
     python3 -m pip install -r requirements.txt
-
-
-
-# Expose ports and entrypoint
-#EXPOSE 8545 8546 30303 30303/udp
-#ENTRYPOINT ["geth"]
-#ENTRYPOINT ["ganache-cli", "-h", "0.0.0.0", "-p", "8545", "&&", "go", "run", "main.go"]
-
-#https://hub.docker.com/r/trufflesuite/ganache-cli/
-#https://levelup.gitconnected.com/run-the-ganache-cli-inside-the-docker-container-5e70bc962bfe
